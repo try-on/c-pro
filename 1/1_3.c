@@ -14,13 +14,4 @@ int main()
    cost = (I - 1) * 10;
    
    printf("%.0f %.0f", I, cost);
-   
-    
-    
-    
-    
-    
-    
-    
-    
 }
