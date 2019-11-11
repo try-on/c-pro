@@ -1,28 +1,29 @@
 #include <stdio.h>
+void input(int* x){
+    scanf("%d", x);
+}
+void output(int x){
+    
+    printf("%d", x);
+    
+}
+
+int sqr(int x){
+    
+    return x * x; 
+    
+}
 
 int main()
 {
-    int a[3];
-    
-    for(int i = 0; i < 3; ++i){
-        
-        scanf("%d", &a[i]);
-        
-    }
-    
-    int i = 0;
-    
-    while(a[i] >= 0 && i < 3){
-        
-        i++;
-        
-    }
-    
-    if(i < 3){
-    
-    printf("%d",a[i]);
-        
-    }
-
-    return 0;
+ 
+ int x;
+ 
+ input(&x);
+ 
+ output(sqr(x));
+ 
+ 
+ 
+ 
 }
