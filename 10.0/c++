@@ -53,7 +53,7 @@ int main()
             
         for(int j = 0; j < COLS; j++){
             
-            if(mass[i][j] < max){
+            if(mass[i][j] > max){
                 
             max = mass[i][j];    
             maxJ = j;
