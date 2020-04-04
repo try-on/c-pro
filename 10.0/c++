@@ -1,0 +1,100 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    srand(time(NULL));
+
+    const int ROWS = 5;
+    const int COLS = 5;
+    
+    
+    int mass[ROWS][COLS];
+    
+    
+    for(int i = 0; i < ROWS; i++){
+        
+        for(int j = 0; j < COLS; j++){
+            
+            mass[i][j] = rand()%89 + 10;
+            
+            
+        }
+        
+        
+        
+    }
+    
+   for(int i = 0; i < ROWS; i++){
+        
+        for(int j = 0; j < COLS; j++){
+            
+            cout << mass[i][j] << "\t";
+            
+            
+        }
+        
+        cout << endl;
+        
+    } 
+
+    cout << "-----------------------------------";    
+    
+    int max; 
+    int maxJ;
+    int tmp;
+    
+    
+    for(int i = 0; i < ROWS; i++){
+        
+        for(int j = 0; j < COLS; j++){
+            max = 0;
+            maxJ = 0; 
+            
+            if(mass[i][j] < max){
+                
+            max = mass[i][j];    
+            maxJ = j;
+            
+            
+            }
+            
+            
+            
+            tmp = mass[i][0];
+            mass[i][0] = max;
+            mass[i][maxJ] = tmp; 
+            
+        }
+        
+        cout << endl;
+    }
+    
+    
+    
+    
+      
+   for(int i = 0; i < ROWS; i++){
+        
+        for(int j = 0; j < COLS; j++){
+            
+            cout << mass[i][j] << "\t";
+            
+            
+        }
+        
+        cout << endl;
+        
+    } 
+
+    
+    
+    
+    
+    
+   
+    return 0;
+}
+
