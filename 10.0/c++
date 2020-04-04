@@ -48,10 +48,10 @@ int main()
     
     
     for(int i = 0; i < ROWS; i++){
-        
-        for(int j = 0; j < COLS; j++){
-            max = 0;
+         max = 0;
             maxJ = 0; 
+            
+        for(int j = 0; j < COLS; j++){
             
             if(mass[i][j] < max){
                 
@@ -60,15 +60,12 @@ int main()
             
             
             }
-            
-            
-            
-            tmp = mass[i][0];
-            mass[i][0] = max;
-            mass[i][maxJ] = tmp; 
-            
+     
         }
-        
+         tmp = mass[i][0];
+            mass[i][0] = max;
+            mass[i][maxJ] = tmp;
+         
         cout << endl;
     }
     
